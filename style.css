@@ -1,8 +1,31 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header p {
+    margin: 5px 0;
+    font-size: 1.2em;
+}
+
+header a {
+    color: #00aaff;
+    text-decoration: none;
 }
 
 .container {
@@ -11,69 +34,54 @@ body {
     overflow: hidden;
 }
 
-header {
-    background: #333;
-    color: #fff;
-    padding-top: 30px;
-    min-height: 70px;
-    border-bottom: #77aaff 3px solid;
-    text-align: center;
+main {
+    padding: 20px 0;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 24px;
-    text-transform: uppercase;
-}
-
-header p {
-    margin: 0;
-    font-size: 16px;
-}
-
-header a {
-    color: #77aaff;
-    text-decoration: none;
-}
-
-section {
-    padding: 20px;
+.skills, .projects {
     background: #fff;
-    margin-bottom: 20px;
+    margin: 20px 0;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-section h2 {
+.skills h2, .projects h2 {
     color: #333;
-    font-size: 22px;
-    border-bottom: #77aaff 2px solid;
+    font-size: 1.8em;
+    border-bottom: 2px solid #00aaff;
     padding-bottom: 10px;
 }
 
-section ul {
+ul {
     list-style: none;
     padding: 0;
 }
 
-section ul li {
-    padding: 5px;
-    margin-bottom: 5px;
-    background: #f4f4f4;
+ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
 }
 
-section article {
+.projects article {
     margin-bottom: 20px;
 }
 
-section article h3 {
-    color: #333;
-    font-size: 20px;
+.projects article h3 {
+    color: #00aaff;
+    font-size: 1.5em;
 }
 
-section article p {
-    margin: 5px 0;
+.projects article p {
+    margin: 10px 0;
 }
 
-section article a {
-    color: #77aaff;
-    text-decoration: none;
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }
+
