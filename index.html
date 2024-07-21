@@ -1,65 +1,68 @@
 <!DOCTYPE html>
 <html lang="kr">
-    <head>
-        <meta charset="UTF-8" />
-        <title>고태희 포트폴리오</title>
-        <!----CSS link----->
-        <link rel="stylesheet" href="style.css" />
-    </head>
-    <body>
-        <div class="hero">
-            <nav>
-               
-                <ul>
-                    <li><a href="#">홈</a></li>
-                    <li><a href="#">소개</a></li>
-                    <li><a href="#">사용언어</a></li>
-                    <li><a href="#">포트폴리오</a></li>
-                    <li><a href="#">이메일</a></li>
-                
-                </ul>
-            
-            </nav>
-            <div class="content">
-                <span class="title">자율운항 선박을 배우는 사람</span>
-                <h1>안녕하세요, 저는<span>고태희</span> 입니다.</h1>
-                <p>
-                    안녕하세요 자율운항 선박관련 기업에 취업하고 싶은 고태희 입니다. 이미지인식과 선박관련된 지식을 공부하고 있습니다.
-                </p>
-                <a href="#" class="btn">다운로드</a>
-            </div>
+<head>
+    <meta charset="UTF-8" />
+    <title>고태희 포트폴리오</title>
+    <!--CSS link-->
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="hero">
+        <nav>
+            <ul>
+                <li><a href="#">홈</a></li>
+                <li><a href="#introduction">소개</a></li>
+                <li><a href="#">사용언어</a></li>
+                <li><a href="#">포트폴리오</a></li>
+                <li><a href="#">이메일</a></li>
+            </ul>
+        </nav>
+        <div class="content">
+            <span class="title">자율운항 선박을 배우는 사람</span>
+            <h1>안녕하세요.<span>고태희</span>입니다.</h1>
+            <p>
+                안녕하세요 자율운항 선박관련 기업에 취업하고 싶은 고태희입니다. 이미지인식과 선박관련된 지식을 공부하고 있습니다.
+            </p>
         </div>
-
-       
-        <h3>팀 프로잭트1: AI/SW 아이디어 캠프</h3>
-        <p><strong>참여기간:</strong> 2024.05.23 ~ 05.24</p>
-        <p><strong>설명:</strong> 동서대에서 주최한 AI/SW 아이디어 캠프입니다.</p>
-        <p><strong>사용한 기술:</strong> Figma</p>
-        <p><strong>역할:</strong> 팀원이 알려준 아이디어를 Figma를 이용하여 디지털 팜플렛을 만들었습니다.</p>
-        <p><strong>링크:</strong> <a href="https://generic-engineers-297508.framer.app/" target="_blank">아이디어 캠프 결과 링크</a></p>
-
-        <h3>팀 프로잭트2</h3>
-        <h3>Project 1: 생성 AI의 가짜(Fake) 음성 검출 및 탐지</h3>
-        <p><strong>참여기간:</strong> 2024.07.1 ~ 07.19</p>
-        <p><strong>설명:</strong> Dacon에서 주최한 SW중심대학 디지털 경진대회입니다.</p>
-        <p><strong>사용한 기술:</strong> Python, PyTorch</p>
-        <p><strong>역할:</strong> MLP모델을 설계하였고, 하이퍼파라미터를 조정했습니다.</p>
-        <p><strong>링크:</strong> <a href="https://github.com/koth5997/Portfolio/blob/main/baseline%201-%20.ipynb" target="_blank">fakevoice 결과 링크</a></p>
-
-
+    </div>
+    <section id="introduction">
+        <h3>소개</h3>
+        <p><strong>학력:</strong> 동서대학교 재학중</p>
+        <p><strong>전공:</strong> 컴퓨터공학과</p>
+        <p><strong>부전공:</strong> 부산공유대학 스마트 해양모빌리티전공 </p>
+    </section>
+    <section id="projects">
+        <h3>팀 프로젝트</h3>
+        <div class="project">
+            <h4>프로젝트1: AI/SW 아이디어 캠프</h4>
+            <p><strong>참여기간:</strong> 2024.05.23 ~ 05.24</p>
+            <p><strong>설명:</strong> 동서대에서 주최한 AI/SW 아이디어 캠프입니다.</p>
+            <p><strong>사용한 기술:</strong> Figma</p>
+            <p><strong>역할:</strong> 팀원이 알려준 아이디어를 Figma를 이용하여 디지털 팜플렛을 만들었습니다.</p>
+            <p><strong>링크:</strong> <a href="https://generic-engineers-297508.framer.app/" target="_blank">아이디어 캠프 결과 링크</a></p>
+        </div>
+        <div class="project">
+            <h4>프로젝트2: 생성 AI의 가짜(Fake) 음성 검출 및 탐지</h4>
+            <p><strong>참여기간:</strong> 2024.07.1 ~ 07.19</p>
+            <p><strong>설명:</strong> Dacon에서 주최한 SW중심대학 디지털 경진대회입니다.</p>
+            <p><strong>사용한 기술:</strong> Python, PyTorch</p>
+            <p><strong>역할:</strong> MLP모델을 설계하였고, 하이퍼파라미터를 조정했습니다.</p>
+            <p><strong>링크:</strong> <a href="https://github.com/koth5997/Portfolio/blob/main/baseline%201-%20.ipynb" target="_blank">fakevoice 결과 링크</a></p>
+        </div>
+    </section>
+    <section id="education">
         <h2>교육과정</h2>
-        <ul>
-        <p>동서대학교 컴퓨터 공학과 전공이고 부산공유대학 부전공으로 스마트 해양모빌리티 자율운항선박도 함께듣고있습니다.</p>
-        </ul>
-
-
+        <p>동서대학교 컴퓨터 공학과 전공이고 부산공유대학 부전공으로 스마트 해양모빌리티 자율운항선박도 함께 듣고 있습니다.</p>
+    </section>
+    <section id="goals">
         <h2>목표</h2>
         <ul>
             <li><strong>Languages:</strong> [List any languages you speak fluently]</li>
             <li><strong>Interests:</strong> [List any relevant interests or hobbies]</li>
         </ul>
-    </div> 
-    </body>
+    </section>
+    <script src="script.js"></script>
+</body>
 </html>
 
 
