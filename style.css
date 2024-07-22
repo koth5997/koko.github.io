@@ -93,3 +93,27 @@ section p, section li {
 .project {
     margin-bottom: 40px;
 }
+
+#introduce {
+    background: #f9f9f9;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#projects {
+    background: #f0f0f0;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#introduce h3, #projects h3 {
+    color: #333;
+    text-align: center;
+}
+
+#introduce p, #projects p {
+    color: #666;
+    line-height: 1.8;
+}
