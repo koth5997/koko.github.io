@@ -39,10 +39,13 @@ nav ul li a {
     color: #1d1d24;
     position: relative;
     padding: 5px 0;
-    transition: color 0.3s;
+    transition: color 0.3s, background-color 0.3s; /* 배경색 변경 효과 추가 */
 }
-nav ul li a:hover {
-    color: #fd4766;
+nav ul li a:hover, nav ul li a:focus {
+    color: white; /* 글자색 변경 */
+    background-color: #1c99fe; /* 배경색 변경 */
+    padding: 5px 10px; /* 패딩 추가하여 배경을 더 명확히 표시 */
+    border-radius: 5px; /* 모서리 둥글게 */
 }
 nav ul li a:after {
     content: "";
@@ -73,14 +76,33 @@ nav ul li a:hover:after {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+.content {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translateX(-50%); /* 중앙 정렬 */
+    max-width: 90%; /* 최대 너비 조정 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+    padding: 20px;
+    box-sizing: border-box;
+    color: #fff; /* 글자색 흰색 */
+}
+
 .content h1 {
-    font-size: 60px;
-    font-weight: 900;
-    margin-bottom: 20px;
+    font-size: 48px; /* 폰트 크기 */
+    font-weight: 900; /* 글자 두껍게 */
+    color: rgb(241, 244, 246); /* 글자 색상 조정 */
+    white-space: nowrap; /* 줄바꿈 없음 */
+    overflow: hidden; /* 넘치는 텍스트 숨김 */
+    text-overflow: ellipsis; /* 넘치는 텍스트 ...으로 표시 */
+    margin-bottom: 20px; /* 아래 여백 */
 }
+
 .content h1 span {
-    color: #fd4766;
+    color: #FD4766; /* 강조 텍스트 색상 변경 */
 }
+
+
 section {
     padding: 60px 100px;
 }
@@ -119,5 +141,3 @@ section p, section li, section ul {
     list-style-type: disc; /* Change bullet style */
     margin-bottom: 10px; /* Add margin between list items */
 }
-
-
