@@ -1,30 +1,24 @@
-/* ===================================================================
- * Main JS
- * ------------------------------------------------------------------- */
-
 (function(html) {
     'use strict';
 
+    // MailChimp URL configuration
     const cfg = {
-        // MailChimp URL
-        mailChimpURL : 'https://facebook.us1.list-manage.com/subscribe/post?u=1abf75f6981256963a47d197a&amp;id=37c6d8f4d6' 
+        mailChimpURL: 'https://facebook.us1.list-manage.com/subscribe/post?u=1abf75f6981256963a47d197a&amp;id=37c6d8f4d6'
     };
 
-    /* preloader
-    * -------------------------------------------------- */
+    // Preloader function
     const ssPreloader = function() {
         const siteBody = document.querySelector('body');
         const preloader = document.querySelector('#preloader');
         if (!preloader) return;
 
         html.classList.add('ss-preload');
-        
         window.addEventListener('load', function() {
             html.classList.remove('ss-preload');
             html.classList.add('ss-loaded');
-            
+
             preloader.addEventListener('transitionend', function afterTransition(e) {
-                if (e.target.matches('#preloader'))  {
+                if (e.target.matches('#preloader')) {
                     siteBody.classList.add('ss-show');
                     e.target.style.display = 'none';
                     preloader.removeEventListener(e.type, afterTransition);
@@ -33,8 +27,7 @@
         });
     };
 
-    /* mobile menu
-    * ---------------------------------------------------- */ 
+    // Mobile menu functionality
     const ssMobileMenu = function() {
         const toggleButton = document.querySelector('.s-header__menu-toggle');
         const mainNavWrap = document.querySelector('.s-header__nav');
@@ -65,33 +58,22 @@
         });
     };
 
-    /* smoothscroll
-    * ------------------------------------------------------ */
+    // Smooth scroll for links
     const ssMoveTo = function() {
-        const easeFunctions = {
-            easeInOutCubic: function (t, b, c, d) {
-                t /= d/2;
-                if (t < 1) return c/2*t*t*t + b;
-                t -= 2;
-                return c/2*(t*t*t + 2) + b;
-            }
-        }
-
         const triggers = document.querySelectorAll('.smoothscroll');
         const moveTo = new MoveTo({
             tolerance: 0,
             duration: 1200,
             easing: 'easeInOutCubic',
             container: window
-        }, easeFunctions);
+        });
 
         triggers.forEach(function(trigger) {
             moveTo.registerTrigger(trigger);
         });
     };
 
-    /* Initialize
-    * ------------------------------------------------------ */
+    // Initialize all functions
     (function ssInit() {
         ssPreloader();
         ssMobileMenu();
@@ -100,11 +82,3 @@
 
 })(document.documentElement);
 
-document.querySelectorAll('nav ul li a').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
