@@ -84,29 +84,40 @@ nav ul li a:hover:after {
 section {
     padding: 60px 100px;
 }
-section h3 {
+section h3, section h2 {
     font-size: 28px;
     margin-bottom: 20px;
+    text-align: center; /* Center-align titles */
 }
-section p, section li {
+section p, section li, section ul {
     font-size: 18px;
     margin-bottom: 10px;
+    text-align: left; /* Left-align content */
 }
 .project {
     margin-bottom: 40px;
 }
-#introduce, #projects {
+#introduce, #projects, #goals, #connect {
     background: #f9f9f9;
     padding: 50px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Added margin-bottom to separate sections */
 }
-#introduce h3, #projects h3 {
+#introduce h3, #projects h3, #goals h2, #connect h2 {
     color: #333;
-    text-align: center;
+    margin-bottom: 20px;
 }
-#introduce p, #projects p {
+#introduce p, #projects p, #goals p, #connect p {
     color: #666;
     line-height: 1.8;
 }
+#goals ul {
+    padding-left: 20px; /* Add padding to the left for the list items */
+}
+#goals ul li {
+    list-style-type: disc; /* Change bullet style */
+    margin-bottom: 10px; /* Add margin between list items */
+}
+
 
