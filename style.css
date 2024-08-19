@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap");
-
+/* General Styles */
 * {
     margin: 0;
     padding: 0;
@@ -8,66 +7,99 @@
 }
 body {
     line-height: 1.6;
-    color: #333;
+    background-color: #f9f9f9;
 }
-a {
-    text-decoration: none;
-    color: inherit;
-}
-.hero {
+
+/* Preloader */
+#preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1001;
     width: 100%;
-    height: 100vh;
-    background: url(https://user-images.githubusercontent.com/127705834/227777971-bc9a2937-998c-413e-99aa-9bdbc50c86bd.jpg) no-repeat center center;
-    background-size: cover;
-    position: relative;
-    color: #fff;
+    height: 100%;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-nav {
+.dots-fade div {
+    width: 12px;
+    height: 12px;
+    margin: 6px;
+    background: #fd4766;
+    border-radius: 50%;
+    animation: dots-fade 1.2s infinite linear;
+}
+.dots-fade div:nth-child(1) {
+    animation-delay: -0.3s;
+}
+.dots-fade div:nth-child(2) {
+    animation-delay: -0.15s;
+}
+@keyframes dots-fade {
+    0%, 100% {
+        opacity: 0.2;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+/* Header */
+.s-header {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+.s-header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+.s-header__menu-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+.s-header__menu-links li a {
+    color: #1d1d24;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: color 0.3s;
+}
+.s-header__menu-links li a:hover {
+    color: #fd4766;
+}
+.s-header__contact .btn--primary {
+    background-color: #fd4766;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+.s-header__contact .btn--primary:hover {
+    background-color: #1d1d24;
+}
+
+/* Hero Section */
+.hero {
+    background: url('https://user-images.githubusercontent.com/127705834/227777971-bc9a2937-998c-413e-99aa-9bdbc50c86bd.jpg') no-repeat center center/cover;
+    height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 30px 100px;
-}
-nav ul {
-    list-style: none;
-}
-nav ul li {
-    display: inline-block;
-    padding: 0 20px;
-}
-nav ul li a {
-    color: #1d1d24;
-    position: relative;
-    padding: 5px 0;
-    transition: color 0.3s, background-color 0.3s; /* 배경색 변경 효과 추가 */
-}
-nav ul li a:hover, nav ul li a:focus {
-    color: white; /* 글자색 변경 */
-    background-color: #1c99fe; /* 배경색 변경 */
-    padding: 5px 10px; /* 패딩 추가하여 배경을 더 명확히 표시 */
-    border-radius: 5px; /* 모서리 둥글게 */
-}
-nav ul li a:after {
-    content: "";
-    position: absolute;
-    left: 0;
-    width: 0;
-    height: 3px;
-    background: #fd4766;
-    transition: width 0.3s;
-    bottom: -5px;
-}
-nav ul li a:hover:after {
-    width: 100%;
-}
-.content {
-    position: absolute;
-    top: 35%;
-    left: 8%;
+    justify-content: center;
     color: #fff;
-    max-width: 600px;
 }
-.content .title {
+.hero .content {
+    text-align: center;
+}
+.hero .title {
     font-size: 30px;
     text-transform: uppercase;
     letter-spacing: 4px;
@@ -76,68 +108,48 @@ nav ul li a:hover:after {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-.content {
-    position: absolute;
-    top: 35%;
-    left: 50%;
-    transform: translateX(-50%); /* 중앙 정렬 */
-    max-width: 90%; /* 최대 너비 조정 */
-    text-align: center; /* 텍스트 중앙 정렬 */
-    padding: 20px;
-    box-sizing: border-box;
-    color: #fff; /* 글자색 흰색 */
+.hero h1 {
+    font-size: 60px;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+.hero h1 span {
+    color: #fd4766;
 }
 
-.content h1 {
-    font-size: 48px; /* 폰트 크기 */
-    font-weight: 900; /* 글자 두껍게 */
-    color: rgb(241, 244, 246); /* 글자 색상 조정 */
-    white-space: nowrap; /* 줄바꿈 없음 */
-    overflow: hidden; /* 넘치는 텍스트 숨김 */
-    text-overflow: ellipsis; /* 넘치는 텍스트 ...으로 표시 */
-    margin-bottom: 20px; /* 아래 여백 */
-}
-
-.content h1 span {
-    color: #FD4766; /* 강조 텍스트 색상 변경 */
-}
-
-
-section {
+/* Sections */
+.s-pagecontent {
     padding: 60px 100px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 30px 0;
 }
-section h3, section h2 {
+.s-pagecontent h3 {
     font-size: 28px;
     margin-bottom: 20px;
-    text-align: center; /* Center-align titles */
+    color: #333;
+    text-align: center;
 }
-section p, section li, section ul {
+.s-pagecontent p, .s-pagecontent li {
     font-size: 18px;
     margin-bottom: 10px;
-    text-align: left; /* Left-align content */
+    color: #666;
+    line-height: 1.8;
 }
 .project {
     margin-bottom: 40px;
 }
-#introduce, #projects, #goals, #connect {
-    background: #f9f9f9;
-    padding: 50px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px; /* Added margin-bottom to separate sections */
+.project h4 {
+    color: #1d1d24;
+    margin-bottom: 10px;
 }
-#introduce h3, #projects h3, #goals h2, #connect h2 {
-    color: #333;
-    margin-bottom: 20px;
+.project a {
+    color: #fd4766;
+    text-decoration: none;
+    transition: color 0.3s;
 }
-#introduce p, #projects p, #goals p, #connect p {
-    color: #666;
-    line-height: 1.8;
+.project a:hover {
+    color: #1d1d24;
 }
-#goals ul {
-    padding-left: 20px; /* Add padding to the left for the list items */
-}
-#goals ul li {
-    list-style-type: disc; /* Change bullet style */
-    margin-bottom: 10px; /* Add margin between list items */
-}
+
