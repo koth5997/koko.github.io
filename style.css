@@ -1,4 +1,4 @@
-/* General Styles */
+
 * {
     margin: 0;
     padding: 0;
@@ -11,7 +11,7 @@ body {
     transition: background-color 0.3s, color 0.3s;
 }
 
-/* Preloader */
+
 #preloader {
     position: fixed;
     left: 0;
@@ -75,6 +75,8 @@ body {
 }
 .s-header__menu-links li a:hover {
     color: #fd4766;
+    text-shadow: 0 0 8px rgba(253, 71, 102, 0.7);
+    transition: color 0.3s, text-shadow 0.3s;
 }
 .s-header__contact .btn--primary {
     background-color: #fd4766;
@@ -87,9 +89,37 @@ body {
 }
 .s-header__contact .btn--primary:hover {
     background-color: #1d1d24;
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+/* 헤더 축소 시 스타일 */
+.header--small {
+    padding: 10px 40px;
+    transition: padding 0.3s;
 }
 
-/* Hero Section */
+/* 맨 위로 가기 버튼 스타일 */
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    background-color: #fd4766;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none; /* 초기 상태에서 숨김 */
+    transition: opacity 0.3s;
+}
+
+.scroll-to-top:hover {
+    background-color: #333;
+}
+
+
 .hero {
     background: url('https://user-images.githubusercontent.com/127705834/227777971-bc9a2937-998c-413e-99aa-9bdbc50c86bd.jpg') no-repeat center center/cover;
     height: 100vh;
@@ -111,6 +141,15 @@ body {
     background: linear-gradient(120deg, #1c99fe 20.69%, #7644ff 50.19%, #fd4766 79.69%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    animation: color-change 3s infinite alternate;
+}
+@keyframes color-change {
+    0% {
+        color: #1c99fe;
+    }
+    100% {
+        color: #fd4766;
+    }
 }
 .hero h1 {
     font-size: 60px;
@@ -159,7 +198,7 @@ body {
     color: #1d1d24;
 }
 
-/* Reveal Animation */
+
 .reveal {
     opacity: 0;
     transform: translateY(50px);
@@ -170,7 +209,7 @@ body {
     transform: translateY(0);
 }
 
-/* Dark Mode */
+
 .dark-mode {
     background-color: #121212;
     color: #f9f9f9;
@@ -232,35 +271,33 @@ body {
 .item img {
     display: block;
     margin: 0 auto 15px;
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
+    transition: transform 0.3s ease;
+}
+.item img:hover {
+    transform: scale(1.1);
 }
 
-.item p {
-    font-size: 20px;
-    color: #666;
-    margin: 0;
-}
 .item-inline {
     display: flex;
     align-items: center;
-    gap: 10px; 
-    margin-top: 10px; 
+    gap: 10px;
+    margin-top: 10px;
 }
 
 .item-inline img {
-    width: 100px; 
+    width: 50px;
     height: auto;
 }
 
 .item-inline p {
     margin: 0;
-    font-size: 14px; 
+    font-size: 14px;
     color: #666;
 }
 
 
-/* 모바일에서의 메뉴 스타일 */
 @media (max-width: 768px) {
     .s-header__menu-links {
         flex-direction: column;
