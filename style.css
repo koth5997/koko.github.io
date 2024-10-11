@@ -231,13 +231,13 @@ body {
 
 .item img {
     display: block;
-    margin: 0 auto 5px;
-    width: 50px;
-    height: 50px;
+    margin: 0 auto 15px;
+    width: 200px;
+    height: 200px;
 }
 
 .item p {
-    font-size: 14px;
+    font-size: 20px;
     color: #666;
     margin: 0;
 }
