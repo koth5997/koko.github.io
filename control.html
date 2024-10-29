@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dodam</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #00C389;
+            color: #FF9E29;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-top: 20px;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 50px;
+        }
+
+        .button-container button {
+            background-color: #fff;
+            color: #FF9E29;
+            border: none;
+            padding: 20px;
+            margin: 20px;
+            font-size: 1.5em;
+            border-radius: 10px;
+            width: 150px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .button-container button:hover {
+            background-color: #FF9E29;
+            color: white;
+        }
+
+        .section {
+            display: none;
+            margin-top: 20px;
+        }
+
+        .group-title {
+            font-size: 1.5em;
+            margin: 20px 0;
+            color: #fff;
+        }
+
+        .button-group {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .button-group button {
+            background-color: #fff;
+            color: #FF9E29;
+            border: none;
+            padding: 15px 30px;
+            margin: 10px;
+            font-size: 1.2em;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .button-group button:hover {
+            background-color: #FF9E29;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dodam</h1>
+
+    <div class="button-container">
+        <button onclick="showSection('learnSection')">학습하기</button>
+        <button onclick="showSection('infoSection')">학습정보</button>
+        <button onclick="showSection('testSection')">점자 테스트</button>
+    </div>
+
+    <!-- 학습하기 Section -->
+    <div id="learnSection" class="section">
+        <h2>학습하기</h2>
+        <div class="group-title">초성 자음</div>
+        <div class="button-container">
+        <button onclick="sendCharacter(1)">ㄱ</button>
+        <button onclick="sendCharacter(2)">ㄴ</button>
+        <button onclick="sendCharacter(3)">ㄷ</button>
+        <button onclick="sendCharacter(4)">ㄹ</button>
+        <button onclick="sendCharacter(5)">ㅁ</button>
+        <button onclick="sendCharacter(6)">ㅂ</button>
+        <button onclick="sendCharacter(7)">ㅅ</button>
+        <button onclick="sendCharacter(9)">ㅈ</button>
+        <button onclick="sendCharacter(10)">ㅊ</button>
+        <button onclick="sendCharacter(11)">ㅋ</button>
+        <button onclick="sendCharacter(12)">ㅌ</button>
+        <button onclick="sendCharacter(13)">ㅍ</button>
+        <button onclick="sendCharacter(14)">ㅎ</button>
+    </div>
+    
+    <div class="group-title">중성 자음</div>
+    <div class="button-container">
+        <button onclick="sendCharacter(41)">ㄱ</button>
+        <button onclick="sendCharacter(42)">ㄴ</button>
+        <button onclick="sendCharacter(43)">ㄷ</button>
+        <button onclick="sendCharacter(44)">ㄹ</button>
+        <button onclick="sendCharacter(45)">ㅁ</button>
+        <button onclick="sendCharacter(46)">ㅂ</button>
+        <button onclick="sendCharacter(47)">ㅅ</button>
+        <button onclick="sendCharacter(8)">ㅇ</button>
+        <button onclick="sendCharacter(48)">ㅈ</button>
+        <button onclick="sendCharacter(49)">ㅊ</button>
+        <button onclick="sendCharacter(50)">ㅋ</button>
+        <button onclick="sendCharacter(51)">ㅌ</button>
+        <button onclick="sendCharacter(52)">ㅍ</button>
+        <button onclick="sendCharacter(53)">ㅎ</button>
+    
+    </div>
+    
+    <div class="group-title">자음 된소리</div>
+    <div class="button-container">
+        <button onclick="sendCharacter(36)">ㄲ</button>
+        <button onclick="sendCharacter(37)">ㄸ</button>
+        <button onclick="sendCharacter(38)">ㅃ</button>
+        <button onclick="sendCharacter(39)">ㅆ</button>
+        <button onclick="sendCharacter(40)">ㅉ</button>
+    
+    
+    </div>
+    
+    <div class="group-title">모음 </div>
+    <div class="button-container">
+        <button onclick="sendCharacter(15)">ㅏ</button>
+        <button onclick="sendCharacter(16)">ㅑ</button>
+        <button onclick="sendCharacter(17)">ㅓ</button>
+        <button onclick="sendCharacter(18)">ㅕ</button>
+        <button onclick="sendCharacter(19)">ㅗ</button>
+        <button onclick="sendCharacter(20)">ㅛ</button>
+        <button onclick="sendCharacter(21)">ㅜ</button>
+        <button onclick="sendCharacter(22)">ㅠ</button>
+        <button onclick="sendCharacter(23)">ㅡ</button>
+        <button onclick="sendCharacter(24)">ㅣ</button>
+        <button onclick="sendCharacter(25)">ㅐ</button>
+        <button onclick="sendCharacter(26)">ㅔ</button>
+        <button onclick="sendCharacter(27)">ㅚ</button>
+        <button onclick="sendCharacter(28)">ㅘ</button>
+        <button onclick="sendCharacter(29)">ㅝ</button>
+        <button onclick="sendCharacter(30)">ㅢ</button>
+        <button onclick="sendCharacter(31)">ㅖ</button>
+    
+    </div>
+    <div class="group-title">모음 된소리 </div>
+    <div class="button-container">
+        <button onclick="sendCharacter(32)">ㅟ</button>
+        <button onclick="sendCharacter(33)">ㅒ</button>
+        <button onclick="sendCharacter(34)">ㅙ</button>
+        <button onclick="sendCharacter(35)">ㅞ</button>
+    </div>
+
+    <!-- 학습정보 Section -->
+    <div id="infoSection" class="section">
+        <h2>학습정보</h2>
+        <p>학습에 대한 정보를 여기에 표시합니다.</p>
+    </div>
+
+    <!-- 점자 테스트 Section -->
+    <div id="testSection" class="section">
+        <h2>점자 테스트</h2>
+        <p>점자 테스트에 대한 내용을 여기에 표시합니다.</p>
+    </div>
+
+    <script>
+        // 섹션을 표시하는 함수
+        function showSection(sectionId) {
+            // 모든 섹션을 숨김
+            var sections = document.getElementsByClassName('section');
+            for (var i = 0; i < sections.length; i++) {
+                sections[i].style.display = 'none';
+            }
+            // 선택된 섹션만 보이게 함
+            document.getElementById(sectionId).style.display = 'block';
+        }
+
+        // 서버로 문자를 보내는 함수
+        function sendCharacter(number) {
+            fetch('/send?num=' + number, {
+                method: 'GET'
+            }).then(response => {
+                if (response.ok) {
+                    console.log("Number sent successfully");
+                } else {
+                    console.error("Failed to send number");
+                }
+            });
+        }
+    </script>
+</body>
+</html>
