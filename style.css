@@ -218,6 +218,31 @@ body {
     display: block;
 }
 
+.image-row {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.item {
+    text-align: center;
+}
+
+.item img {
+    display: block;
+    margin: 0 auto 5px;
+    width: 50px;
+    height: 50px;
+}
+
+.item p {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+}
+
+
 /* 모바일에서의 메뉴 스타일 */
 @media (max-width: 768px) {
     .s-header__menu-links {
@@ -225,4 +250,5 @@ body {
         gap: 10px;
     }
 }
+
 
