@@ -88,4 +88,43 @@ document.addEventListener("DOMContentLoaded", function() {
     document.querySelector('.s-header__logo').addEventListener('click', function() {
         document.body.classList.toggle('dark-mode');
     });
+
+    // 헤더 축소 애니메이션
+    const header = document.querySelector('.s-header');
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 100) {
+            header.classList.add('header--small');
+        } else {
+            header.classList.remove('header--small');
+        }
+    });
+
+    // 스크롤 시 색상 변화
+    const heroSection = document.querySelector('.hero');
+    window.addEventListener('scroll', function() {
+        const scrollPosition = window.scrollY;
+        heroSection.style.backgroundColor = `rgba(0, 0, 0, ${Math.min(scrollPosition / 800, 0.6)})`;
+    });
+
+    // 맨 위로 가기 버튼 추가
+    const scrollToTopBtn = document.createElement('button');
+    scrollToTopBtn.innerText = '▲';
+    scrollToTopBtn.classList.add('scroll-to-top');
+    document.body.appendChild(scrollToTopBtn);
+
+    scrollToTopBtn.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 300) {
+            scrollToTopBtn.style.display = 'block';
+        } else {
+            scrollToTopBtn.style.display = 'none';
+        }
+    });
 });
+
