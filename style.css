@@ -4,12 +4,12 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
+
 body {
     line-height: 1.6;
     background-color: #f9f9f9;
     transition: background-color 0.3s, color 0.3s;
 }
-
 
 #preloader {
     position: fixed;
@@ -23,6 +23,7 @@ body {
     justify-content: center;
     align-items: center;
 }
+
 .dots-fade div {
     width: 12px;
     height: 12px;
@@ -31,12 +32,15 @@ body {
     border-radius: 50%;
     animation: dots-fade 1.2s infinite linear;
 }
+
 .dots-fade div:nth-child(1) {
     animation-delay: -0.3s;
 }
+
 .dots-fade div:nth-child(2) {
     animation-delay: -0.15s;
 }
+
 @keyframes dots-fade {
     0%, 100% {
         opacity: 0.2;
@@ -55,28 +59,33 @@ body {
     z-index: 1000;
     transition: background-color 0.3s;
 }
+
 .s-header__inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 40px;
 }
+
 .s-header__menu-links {
     list-style: none;
     display: flex;
     gap: 20px;
 }
+
 .s-header__menu-links li a {
     color: #1d1d24;
     font-weight: 500;
     text-transform: uppercase;
     transition: color 0.3s;
 }
+
 .s-header__menu-links li a:hover {
     color: #fd4766;
     text-shadow: 0 0 8px rgba(253, 71, 102, 0.7);
     transition: color 0.3s, text-shadow 0.3s;
 }
+
 .s-header__contact .btn--primary {
     background-color: #fd4766;
     color: #fff;
@@ -86,12 +95,14 @@ body {
     font-weight: 600;
     transition: background-color 0.3s;
 }
+
 .s-header__contact .btn--primary:hover {
     background-color: #1d1d24;
     transform: scale(1.05);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s, box-shadow 0.3s;
 }
+
 /* 헤더 축소 시 스타일 */
 .header--small {
     padding: 10px 40px;
@@ -111,13 +122,13 @@ body {
     border-radius: 5px;
     cursor: pointer;
     display: none; /* 초기 상태에서 숨김 */
-    transition: opacity 0.3s;
+    transition: opacity 0.3s, background-color 0.3s;
 }
 
 .scroll-to-top:hover {
     background-color: #333;
+    transform: scale(1.1);
 }
-
 
 .hero {
     background: url('https://user-images.githubusercontent.com/127705834/227777971-bc9a2937-998c-413e-99aa-9bdbc50c86bd.jpg') no-repeat center center/cover;
@@ -129,9 +140,11 @@ body {
     background-blend-mode: multiply;
     transition: background-blend-mode 0.3s;
 }
+
 .hero .content {
     text-align: center;
 }
+
 .hero .title {
     font-size: 30px;
     text-transform: uppercase;
@@ -142,6 +155,7 @@ body {
     -webkit-text-fill-color: transparent;
     animation: color-change 3s infinite alternate;
 }
+
 @keyframes color-change {
     0% {
         color: #1c99fe;
@@ -150,11 +164,13 @@ body {
         color: #fd4766;
     }
 }
+
 .hero h1 {
     font-size: 60px;
     font-weight: 900;
     margin-bottom: 20px;
 }
+
 .hero h1 span {
     color: #fd4766;
 }
@@ -168,12 +184,14 @@ body {
     margin: 30px 0;
     transition: background-color 0.3s, color 0.3s;
 }
+
 .s-pagecontent h3 {
     font-size: 28px;
     margin-bottom: 20px;
     color: #333;
     text-align: center;
 }
+
 .s-pagecontent p, .s-pagecontent li {
     font-size: 18px;
     margin-bottom: 10px;
@@ -181,33 +199,36 @@ body {
     line-height: 1.8;
     transition: color 0.3s;
 }
+
 .project {
     margin-bottom: 40px;
 }
+
 .project h4 {
     color: #1d1d24;
     margin-bottom: 10px;
 }
+
 .project a {
     color: #fd4766;
     text-decoration: none;
     transition: color 0.3s;
 }
+
 .project a:hover {
     color: #1d1d24;
 }
-
 
 .reveal {
     opacity: 0;
     transform: translateY(50px);
     transition: all 0.5s ease-in-out;
 }
+
 .reveal.active {
     opacity: 1;
     transform: translateY(0);
 }
-
 
 .dark-mode {
     background-color: #121212;
@@ -274,6 +295,7 @@ body {
     height: 150px;
     transition: transform 0.3s ease;
 }
+
 .item img:hover {
     transform: scale(1.1);
 }
@@ -295,7 +317,6 @@ body {
     font-size: 14px;
     color: #666;
 }
-
 
 @media (max-width: 768px) {
     .s-header__menu-links {
